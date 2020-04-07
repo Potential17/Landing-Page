@@ -1,3 +1,15 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+
+/* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -26,11 +38,13 @@ h2 {
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
+    cursor: pointer;/*to make section headers clickable*/
 }
 
 p {
     line-height: 1.6em;
     color: #eee;
+    display: block;
 }
 
 /* ---- Layout Rules ---- */
@@ -45,11 +59,19 @@ main {
 
 section {
     position: relative;
-    min-height: 80vh;
+    /* min-height: 80vh; */
 }
 
-
 /* ---- Module Rules ---- */
+#navbar__list {
+    background-color: grey; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    height: 6.5vh;
+    align-items: center; 
+    color: 'black'
+}
 
 /* Navigation Styles*/
 .navbar__menu ul {
@@ -66,23 +88,20 @@ section {
     display: block;
     padding: 1em;
     font-weight: bold;
+    font-size: 2vw;
     text-decoration: none;
     color: #000;
-}
-
- .menu__link_viewed  {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #345;
+    cursor: pointer;
 }
 
 .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
-    cursor: pointer;
+}
+
+.active-s{
+    background-color: beige;
 }
 
 /* Header Styles */
@@ -113,6 +132,35 @@ section {
     text-align: left;
 }
 
+/*hover over section title, and click to collapse or un-collapse*/
+.active{
+    background-color: #407b70;
+}
+
+/*Back to top button*/
+.scrollToTop {
+    margin: 1vw;
+    background: beige;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1vw;
+    /* border: none; */
+    background: beige;
+    border-radius: 2em;
+    display: inline-block;
+    position: fixed;
+    bottom: .5em;
+    right: .5em;
+    width: 4em;
+    height: 4em;
+    font-size: .875em;    
+    cursor: pointer;
+    border: 0;
+    border-radius: 2em;
+
+}
+
 @media only screen and (min-width: 35em){
     .landing__container {
         max-width: 50em;
@@ -123,7 +171,7 @@ section {
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right;
+    text-align: right; 
 }
 
 /* Background Circles */
@@ -181,10 +229,11 @@ section:nth-of-type(3n + 1) .landing__container::after {
     z-index: -5;
     width: 15vh;
     height: 15vh;
-    border-radius: 50%;s
+    border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
 }
+
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
@@ -213,7 +262,7 @@ section.your-active-class .landing__container::after {
 	}
 	to {
 		transform: rotate(360deg)
-		           translate(-1em)
+		           translate(-1em) 
 		           rotate(-360deg);
 	}
 }
