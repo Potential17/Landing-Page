@@ -12,6 +12,18 @@
  * JS Standard: ESlint
  * 
 */
+//adds new section
+var main_body=document.querySelector("main")
+var new_sec = document.createElement("SECTION")
+var sec_text = document.createElement("P")
+var sec_head = document.createElement("H2")
+var container = document.createElement("DIV")
+container.appendChild(sec_head)
+container.appendChild(sec_text)
+container.setAttribute("class", "landing__container")
+new_sec.appendChild(container)
+main_body.appendChild(new_sec)
+
 
 
 /* Global Variables*/
