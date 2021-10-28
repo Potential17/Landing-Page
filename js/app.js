@@ -21,8 +21,7 @@ var container = document.createElement("DIV")
 container.appendChild(sec_head)
 container.appendChild(sec_text)
 container.setAttribute("class", "landing__container")
-new_sec.appendChild(container)
-main_body.appendChild(new_sec)
+
 
 
 
