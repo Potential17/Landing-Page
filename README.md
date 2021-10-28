@@ -1,5 +1,4 @@
 # Landing Page Project
-Landing page centers around manipulating the DOM with Javascript
 
 ## JS functionalities
 
@@ -17,4 +16,3 @@ Landing page centers around manipulating the DOM with Javascript
 •Click LI in navbar to scroll to appropriate section
 
 
-It is created as part of Udacity FrontEnd Web Developer NanoDegree project.
