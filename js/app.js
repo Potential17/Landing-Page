@@ -18,10 +18,6 @@ var new_sec = document.createElement("SECTION")
 var sec_text = document.createElement("P")
 var sec_head = document.createElement("H2")
 var container = document.createElement("DIV")
-sec_head.innerHTML="Section 4"
-sec_text.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellusimperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod."
-new_sec.setAttribute("data-nav", "Section 4")
-new_sec.setAttribute("id", "section4")
 container.appendChild(sec_head)
 container.appendChild(sec_text)
 container.setAttribute("class", "landing__container")
