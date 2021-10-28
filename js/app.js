@@ -18,9 +18,15 @@ var new_sec = document.createElement("SECTION")
 var sec_text = document.createElement("P")
 var sec_head = document.createElement("H2")
 var container = document.createElement("DIV")
+sec_head.innerHTML="Section 5"
+sec_text.innerHTML="NO2 is a gas that enters the atmosphere during all kinds of combustion processes, such as in a car's engine, in heating boilers, in industry or in power stations. Tropospheric NO2 is therefore an important indicator for air pollution. "
+new_sec.setAttribute("data-nav", "Section 5")
+new_sec.setAttribute("id", "section5")
 container.appendChild(sec_head)
 container.appendChild(sec_text)
 container.setAttribute("class", "landing__container")
+new_sec.appendChild(container)
+main_body.appendChild(new_sec)
 
 
 
